@@ -339,10 +339,8 @@ TSPSolution VND::getFourOptSolution(TSPSolution bestSolution)
     return bestSolution;
 }
 
-double VND::tsp()
+TSPSolution VND::vnd(TSPSolution initialSolution)
 {
-    TSPSolution initialSolution = this->getConstructiveSolution();
-
     TSPSolution solution(initialSolution.getValue(), initialSolution.getPoints());
     int k = 0;
     double minSolution = solution.getValue();
@@ -373,5 +371,5 @@ double VND::tsp()
         }
     }
 
-    return solution.getValue();
+    return solution;
 }

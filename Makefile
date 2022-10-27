@@ -1,8 +1,8 @@
 compile:
-	cd src && g++ -o main main.cpp InputFile.cpp TSPSolution.cpp VND.cpp
+	cd src && g++ -o main main.cpp InputFile.cpp TSPSolution.cpp VND.cpp GRASP.cpp
 
 run:
-	cd src && ./main ../testCases/rat195.tsp
+	cd src && ./main ../testCases/berlin52.tsp
 
 all:
-	cd src && g++ -o main main.cpp InputFile.cpp TSPSolution.cpp VND.cpp && ./main ../testCases/lin105.tsp
+	cd src && g++ -o main main.cpp InputFile.cpp TSPSolution.cpp VND.cpp GRASP.cpp && ./main ../testCases/berlin52.tsp

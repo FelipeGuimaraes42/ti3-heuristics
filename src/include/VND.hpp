@@ -21,7 +21,6 @@ private:
     double getPseudoEuclideanDistance(const pair<int, int> xiYi, const pair<int, int> xjYj);
     double getCycleSize(vector<pair<int, int>> points);
 
-    TSPSolution getConstructiveSolution();
     TSPSolution getTwoOptSolution(TSPSolution previousSolution);
     TSPSolution getThreeOptSolution(TSPSolution previousSolution);
     TSPSolution getFourOptSolution(TSPSolution previousSolution);
@@ -29,5 +28,6 @@ private:
 public:
     VND(vector<pair<int, int>> points, string weightType);
     ~VND();
-    double tsp();
+    TSPSolution getConstructiveSolution();
+    TSPSolution vnd(TSPSolution initialSolution);
 };
