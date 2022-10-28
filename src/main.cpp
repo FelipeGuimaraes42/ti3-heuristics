@@ -19,18 +19,18 @@ int main(int argc, char **argv)
     TSPSolution constructiveSolution = vnd.getConstructiveSolution();
     TSPSolution solution = vnd.vnd(constructiveSolution);
 
-    GRASP grasp(weightType, points.size());
+    GRASP grasp(weightType, points);
 
-    // for (int i = 0; i < 10; i++)
-    // {
-    //     TSPSolution graspSolution = grasp.grasp(solution);
-    //     TSPSolution newSolution = vnd.vnd(graspSolution);
+    for (int i = 0; i < 1; i++)
+    {
+        TSPSolution graspSolution = grasp.grasp(solution);
+        TSPSolution newSolution = vnd.vnd(graspSolution);
 
-    //     if (newSolution.getValue() < solution.getValue())
-    //     {
-    //         solution = newSolution;
-    //     }
-    // }
+        if (newSolution.getValue() < solution.getValue())
+        {
+            solution = newSolution;
+        }
+    }
 
     cout << name << " " << weightType << " " << solution.getValue() << endl;
 

@@ -6,9 +6,7 @@ VND::VND(vector<pair<int, int>> points, string weightType)
     this->weightType = weightType;
 }
 
-VND::~VND()
-{
-}
+VND::~VND() {}
 
 double VND::getEuclideanDistance(const pair<int, int> xiYi, const pair<int, int> xjYj)
 {

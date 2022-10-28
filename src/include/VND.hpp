@@ -6,7 +6,6 @@
 
 #include "TSPSolution.hpp"
 
-#define INF 0x3f3f3f3f
 #define MAX_TENTATIVES 3
 
 using namespace std;
