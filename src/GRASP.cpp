@@ -49,7 +49,6 @@ TSPSolution GRASP::grasp(TSPSolution previousSolution)
 	double alpha = 0.6;
 
 	int randomInt = rand() % this->points.size();
-	pair<int, int> startPoint = previousSolution.getPoints().at(randomInt);
 
 	set<int> candidates;
 	for (int i = 0; i < previousSolution.getPoints().size(); i++)
@@ -59,7 +58,7 @@ TSPSolution GRASP::grasp(TSPSolution previousSolution)
 	candidates.erase(randomInt);
 
 	vector<pair<int, int>> graspPoints;
-	graspPoints.push_back(startPoint);
+	graspPoints.push_back(points.at(randomInt));
 
 	while (candidates.size() > 0)
 	{

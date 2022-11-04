@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
     GRASP grasp(weightType, points);
 
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 10; i++)
     {
         TSPSolution graspSolution = grasp.grasp(solution);
         TSPSolution newSolution = vnd.vnd(graspSolution);
@@ -33,6 +33,11 @@ int main(int argc, char **argv)
     }
 
     cout << name << " " << weightType << " " << solution.getValue() << endl;
+    for (auto i : solution.getPoints())
+    {
+        cout << i.first << "," << i.second << "   ";
+    }
+    cout << endl;
 
     return 0;
 }
